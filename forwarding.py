@@ -4,11 +4,11 @@ import socket
 imap_host = "imap.gmail.com"
 smtp_host = "smtp.gmail.com"
 smtp_port = 465
-user = "lovekush@innovaccer.com"
+user = "<fromemail>"
 passwd = "<passwd>"
 msgid = 1
-from_addr = "lovekush@innovaccer.com"
-to_addr = "gangwarlovekush@gmail.com"
+from_addr = "<from_email>"
+to_addr = "to_email"
 
 
 # open IMAP connection and fetch message with id msgid

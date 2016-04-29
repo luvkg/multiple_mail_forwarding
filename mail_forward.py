@@ -6,7 +6,7 @@ import pprint
 #-----------------------mail retreive----------------------
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login('lovekush@innovaccer.com', '<password>')
+mail.login('<login_email>', '<password>')
 mail.list()
 # Out: list of "folders" aka labels in gmail.
 mail.select("INBOX") # connect to inbox.
@@ -37,13 +37,13 @@ for uid in email_uid:
 sm = smtplib.SMTP_SSL()
 sm.connect('smtp.gmail.com',465)
 
-s = sm.login("lovekush@innovaccer.com", "<password>")
+s = sm.login("<login_email>", "<password>")
 print "login Succesfully"
 # print s
 text = email_message.as_string()
 # print text
-fromadd = "lovekush@innovaccer.com"
-toadd= ["gangwarlovekush@gmail.com"]
+fromadd = "<from_email>"
+toadd= ["<to_email>"]
 sa = sm.sendmail(fromadd,toadd,text)
 # print sa
 print "sent"
